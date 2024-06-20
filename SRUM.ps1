@@ -20,7 +20,7 @@ Write-Host "Windows Install at $windowsInstallDate"
 Write-Host "SRUDB was created at $sruDBCreationDate"
 Write-Host "`nDumping SRUM - This may take one minute!"
 
-"$SRUMPath\SrumECmd.exe" -f "C:\Windows\System32\sru\SRUDB.dat" --csv "$SRUMPath\" | Out-Null
+C:\temp\dump\SRUM\SrumECmd.exe -f "C:\Windows\System32\sru\SRUDB.dat" --csv "$SRUMPath\" | Out-Null
 
 Remove-Item "$SRUMPath\SrumECmd.*" -r -force;
 Remove-Item "$SRUMPath\*_SrumECmd_EnergyUsage_Output.csv" -force;
